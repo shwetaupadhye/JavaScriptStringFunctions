@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script String</title>
+</head>
+<body>
+
+    <h1>JavaScript String Methods</h1>
+
+<p>The indexOf() method returns the position of the first occurrence of a specified text:</p>
+
+
+<p id="demo1"></p>
+<p>The length property returns the length of a string:</p>
+<p id="demo2"></p>
+
+<p>Strings are written inside quotes. You can use single or double quotes:</p>
+<p id="demo3"></p>
+
+<p>Click the button to display the first character of the string "HELLO WORLD".</p>
+<button onclick="myFunction1()">Try it</button>
+<p id="demo4"></p>
+
+<p>Click the button to display the unicode of the first character in the string "HELLO WORLD".</p>
+<button onclick="myFunction2()">Try it</button>
+<p id="demo5"></p>
+
+<p>Click the button to join two strings into one new string.</p>
+<button onclick="myFunction3()">Try it</button>
+<p id="demo6"></p>
+
+<p>Click the button to convert the string to uppercase letters.</p>
+<button onclick="myFunction4()">Try it</button>
+<p id="demo7"></p>
+
+<p>Click the button to convert the string to lowercase letters.</p>
+<button onclick="myFunction5()">Try it</button>
+<p id="demo8"></p>
+
+<p>Click the button to display the extracted part of the string.</p>
+<button onclick="myFunction6()">Try it</button>
+<p id="demo9"></p>
+
+<p>Click the button to display the extracted part of the string.</p>
+<button onclick="myFunction7()">Try it</button>
+<p id="demo10"></p>
+
+<p>Click the button to display the character of the specified unicode number.</p>
+<button onclick="myFunction8()">Try it</button>
+<p id="demo11"></p>
+
+<p>Trim() Function</p>
+<button onclick="myFunction9()">Try It</button>
+<p id="demo12"></p>
+
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");
+document.getElementById("demo1").innerHTML = pos;
+
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+document.getElementById("demo2").innerHTML = sln;
+
+var carName1 = "Volvo XC60";  // Double quotes
+var carName2 = 'Volvo XC60';  // Single quotes
+document.getElementById("demo3").innerHTML =
+carName1 + " " + carName2; 
+
+function myFunction1() {
+  var str = "HELLO WORLD";
+  var res = str.charAt(0)
+  document.getElementById("demo4").innerHTML = res;
+}
+
+function myFunction2() {
+  var str = "HELLO WORLD";
+  var n = str.charCodeAt(0);
+  document.getElementById("demo5").innerHTML = n;
+}
+
+function myFunction3() {
+  var str1 = "Hello ";
+  var str2 = "world!";
+  var res = str1.concat(str2);
+  document.getElementById("demo6").innerHTML = res;
+}
+
+function myFunction4() {
+  var str = "Hello World!";
+  var res = str.toUpperCase();
+  document.getElementById("demo7").innerHTML = res;
+}
+
+function myFunction5() {
+  var str = "Hello World!";
+  var res = str.toLowerCase();
+  document.getElementById("demo8").innerHTML = res;
+}
+
+function myFunction6() {
+  var str = "Hello world!"; 
+  var res = str.slice(1, 9);
+  document.getElementById("demo9").innerHTML = res;
+}
+
+function myFunction7() {
+  var str = "Hello world!";
+  document.getElementById("demo10").innerHTML = str.repeat(7);
+}
+
+function myFunction8() {
+  var res = String.fromCharCode(255);
+  document.getElementById("demo11").innerHTML = res;
+}
+function myFunction9(){
+  var s1="   hello Wolld..    Froom JavaScript   !!"
+  var s2= s1.trim();
+  document.getElementById("demo12").innerHTML = s2;
+}
+</script>
+
+    
+</body>
+</html>
